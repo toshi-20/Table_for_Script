@@ -116,7 +116,7 @@
   NSInteger row = [(TSTableView *)controlView rowAtPoint:stopPoint];
   
   
-  TSColorCell *cell = [[[NSApp delegate] cells] objectAtIndex:row];
+  TSColorCell *cell = (TSColorCell *)[[(TSAppDelegate *)[NSApp delegate] cells] objectAtIndex:row];
   
   [panel setTarget:nil];
   [(TSTableView *)controlView setColorCell:nil atRow:-1];
