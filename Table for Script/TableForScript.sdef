@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+<dictionary title="Table for Script Terminology">
+  <suite name="Table for Script Suite" code="????" description="Table for Script specific classes and commands.">
+    
+    
+  <command name="display table" code="dPlyTble" description="Display a table for providing comfortable experience in using your script.">
+    <cocoa class="DisplayTableCommand"/>
+    <direct-parameter type="record" description="Sets a record for displaying in the table."/>
+      
+    <parameter name="explanation" code="eSpt" type="text" optional="yes" description="The explanation of the records."/>
+    <parameter name="window title" code="wDtl" type="text" optional="yes" description="The title of the window.">
+      <cocoa key="windowTitle"/>
+    </parameter>
+    <parameter name="titles" code="tTls" type="list" optional="yes" description="A list of the titles to be applied on the title column. If this argument is omitted, all titles of the column are applied by key words."/>
+    <result type="record" description="The result record"/>
+  </command>
+  
+  <command name="list from text" code="lIstText" description="Convert a particular style text to a list.">
+    <cocoa class="ListFromTextCommand"/>
+    <direct-parameter description="A text in property list style.">
+      <type type="text"/>
+    </direct-parameter>
+    <result type="list" description="A list was converted from the text.">
+    </result>
+  </command>
+  
+  <command name="terminate" code="tErmiNte" description="Terminate this application.">
+    <!-- <cocoa class="TerminateCommand"/> -->
+  </command>
+  
+  
+  
+  
+  
+  <class name="application" code="capp" description="The application's top-level scripting object.">
+    <cocoa class="NSApplication"/>
+    <property name="name" code="pnam" type="text" access="r" description="The name of the application."/>
+    <property name="frontmost" code="pisf" type="boolean" access="r" description="Is this the active application?">
+      <cocoa key="isActive"/>
+    </property>
+    <property name="version" code="vers" type="text" access="r" description="The version number of the application."/>
+    
+    <property name="return code" code="rEcd" type="integer" access="r" description="Returns a number which -1 is cancel, 1 is OK">
+      <cocoa key="scriptingReturnCode"/>
+    </property>
+    
+    
+    <responds-to name="display table">
+      <cocoa method="DisplayTableCommand"/>
+    </responds-to>
+    
+    <responds-to name="list form text">
+      <cocoa method="ListFromTextCommand:"/>
+    </responds-to>
+    
+    
+    <responds-to name="terminate">
+      <cocoa method="TerminateCommand:"/>
+    </responds-to>
+    
+  </class>
+  
+  <value-type name="list" code="List">
+    <cocoa class="NSArray"/>
+  </value-type>
+  
+  
+  <value-type name="RGB color" code="cRGB">
+    <cocoa class="NSColor"/>
+  </value-type>
+  
+  
+  
+  <record-type name="record keys" code="ReKy">
+    <property name="a Value" code="AVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="b Value" code="BVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="c Value" code="CVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="d Value" code="DVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="e Value" code="EVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="f Value" code="FVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="g Value" code="GVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="h Value" code="HVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="i Value" code="IVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="j Value" code="JVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="k Value" code="KVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="l Value" code="LVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="m Value" code="MVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="n Value" code="NVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="o Value" code="OVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="p Value" code="PVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="q Value" code="QVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="r Value" code="RVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="s Value" code="SVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    <property name="t Value" code="TVle" type="text"
+      description="The key represents a text or a number.">
+    </property>
+    
+    
+    <property name="a Bool" code="ABol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="b Bool" code="BBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="c Bool" code="CBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="d Bool" code="DBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="e Bool" code="EBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="f Bool" code="FBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="g Bool" code="GBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="h Bool" code="HBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="i Bool" code="IBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="j Bool" code="JBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="k Bool" code="KBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="l Bool" code="LBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="m Bool" code="MBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="n Bool" code="NBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="o Bool" code="OBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="p Bool" code="PBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="q Bool" code="QBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="r Bool" code="RBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="s Bool" code="SBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    <property name="t Bool" code="TBol" type="boolean"
+      description="The key represents a boolean.">
+    </property>
+    
+    <property name="a List" code="ALst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="b List" code="BLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="c List" code="CLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="d List" code="DLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="e List" code="ELst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="f List" code="FLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="g List" code="GLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="h List" code="HLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="i List" code="ILst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="j List" code="JLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="k List" code="KLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="l List" code="LLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="m List" code="MLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="nList" code="NLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="o List" code="OLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="p List" code="PLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="q List" code="QLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="r List" code="RLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="s List" code="SLst" type="list"
+      description="The key represents a list.">
+    </property>
+    <property name="t List" code="TLst" type="list"
+      description="The key represents a list.">
+    </property>
+    
+    <property name="a Color" code="AClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="b Color" code="BClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="c Color" code="CClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="d Color" code="DClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="e Color" code="EClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="f Color" code="FClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="g Color" code="GClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="h Color" code="HClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="i Color" code="IClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="j Color" code="JClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="k Color" code="KClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="l Color" code="LClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="m Color" code="MClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="n Color" code="NClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="o Color" code="OClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="p Color" code="PClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="q Color" code="QClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="r Color" code="RClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="s Color" code="SClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    <property name="t Color" code="TClr" type="RGB color"
+      description="The key represents a color.">
+    </property>
+    
+  </record-type>
+  
+  </suite>
+</dictionary>

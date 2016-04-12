@@ -1,0 +1,25 @@
+//
+//  Table for Script-Prefix.pch
+//  Table for Script
+//
+//  Created by toshifumi niwa on 2015/03/12.
+//  Copyright (c) 2015 niwa design laboratory. All rights reserved.
+//
+//
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+#endif
+
+enum {
+  VALUE = 0,
+  BOOLEAN = 1,
+  LIST = 2,
+  COLOR = 3,
+  NON = -1,
+};
+
+enum {
+  MODAL_OK = 1,
+  MODAL_CANCEL = -1,
+};
