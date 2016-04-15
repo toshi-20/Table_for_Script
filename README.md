@@ -20,8 +20,9 @@ This script makes the table above.
         set exp to "Create As cores script"
         set aResult to display table aData titles tlts explanation exp 
     
-        if return code is 1 then 
-    
+        if return code is 1 then  -- if user click "OK"
+            -- get values form the table
+            
             set xCod to list from text a Value of aResult
             set yCod to list from text b Value of aResult
             set posDim to a List of aResult 
