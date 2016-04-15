@@ -1,6 +1,6 @@
 # Table_for_Script
-This is a useful table for Apple Script or Java Script users.  
-please show me.  
+This is a useful table for Apple Script or Java Script users on Mac OS.  
+It provides a table and many kinds of cells, text field, check box, popup menu, and color well.  
 ![](https://dl.dropbox.com/s/2batjkyx3piw4ip/tableForCreateAsCore.png?dl=0)  
 ## Sample Script
     Tell application "Table for Script"
