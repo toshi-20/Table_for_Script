@@ -3,6 +3,9 @@ This is a useful table for Apple Script or Java Script users on Mac OS.
 It provides a table and many kinds of cells, text field, check box, popup menu, and color well.  
 ![](https://dl.dropbox.com/s/2batjkyx3piw4ip/tableForCreateAsCore.png?dl=0)  
 ## Sample Script
+This script makes the table above. 
+
+
     Tell application "Table for Script"
         set pos to {"none","top/left","bottom/left","bottom/right","top/right"}
             set aData to {a Value:"(910,455,1820,910)",b value:"(1820,1820,910,455,1820)", a List:pos,  
